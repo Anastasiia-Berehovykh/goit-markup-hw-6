@@ -236,7 +236,7 @@ button {
   left: 50%;
 
   width: 600px;
-  height: 400px;
+  
   padding: 15px;
   background-color: #ffffff;
 
@@ -244,7 +244,134 @@ opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: 250ms var(--timing-function);
 }
+.form {
+  width: 500px;
 
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+.form-field {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-field:focus-within .icon-form {
+  fill: var(--accent);
+  
+}
+.form-name {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+
+.form-field label {
+  margin-bottom: 4px;
+}
+.form-field input {
+  margin: 0;
+  padding: 11px 12px;
+  padding-left: 50px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.icon-form {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  
+
+  transform: translateX(-50%);
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  .checkbox-form {
+    display: flex;
+    align-items: center;
+  }
+  .checkbox-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--white);
+    border: 0.2px solid var(--black);
+    border-radius: 2px;
+    margin-right: 7px;
+  }
+  .checkbox:checked + .checkbox-icon {
+    background-color: var(--accent);
+    background-image: url(../img/check-modal.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent);
+  }
+  .form-link {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+  
+  .textarea {
+    resize: none;
+  }
+  .comment {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+  }
+  
+  .button-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-image: url(../img/close.svg);
+  }
+  .modal-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
 /* hero */
 .hero {
   padding: 200px 0;
