@@ -60,53 +60,62 @@
         <div class="modal">
           <form class="form">
             <p class="form-name">Залиште свої дані, ми вам передзвонимо</p>
-          <p class="form-field">
-            <label for="name">Ім'я</label>
-              
-              <input class="form-input"  type="text" name="name" id="name">
+            <p class="form-field">
+              <label for="name">Ім'я</label>
+
+              <input class="form-input" type="text" name="name" id="name" />
               <span>
                 <svg class="icon-form">
                   <use href="./img/sprite1.svg#icon-person-modal"></use>
                 </svg>
-                
               </span>
+            </p>
+            <p class="form-field">
+              <label for="tel">Телефон</label>
+              <input class="form-input" type="tel" name="tel" id="tel" />
 
-          </p>
-          <p class="form-field">
-              
-            <label for="tel">Телефон</label>
-            <input class="form-input" type="tel" name="tel" id="tel"> 
-            
               <span>
                 <svg class="icon-form">
                   <use href="./img/sprite1.svg#icon-phone-modal"></use>
                 </svg>
-                
               </span>
-          </p>
-          <p class="form-field">
-            <label for="email">Пошта</label>
-            <input class="form-input" type="email" name="email" id="email"> 
-            <span>
-              <svg class="icon-form">
-                <use href="./img/sprite1.svg#icon-email-modal"></use>
-              </svg>
-            </span>
-          </p>
-          <p class="form-field">
-            <label for="comment">Коментар</label>
-            <textarea class="comment" name="comment" id="comment" cols="" rows="10" placeholder="Введіть текст"></textarea>
-          </p>
-          <p class="form-field">
-            <label class="checkbox-form">
-              <input class="checkbox" type="checkbox" name="policy">
-              <span class="checkbox-icon"></span>
-              Погоджуюся з розсилкою та приймаю <span class="form-link">Умови договору</span>
-            </label>
-          </p>
-          <button class="button primary" type="submit">Відправити</button> 
+            </p>
+            <p class="form-field">
+              <label for="email">Пошта</label>
+              <input class="form-input" type="email" name="email" id="email" />
+              <span>
+                <svg class="icon-form">
+                  <use href="./img/sprite1.svg#icon-email-modal"></use>
+                </svg>
+              </span>
+            </p>
+            <p class="form-field">
+              <label for="comment">Коментар</label>
+              <textarea
+                class="comment"
+                name="comment"
+                id="comment"
+                cols=""
+                rows="8"
+                placeholder="Введіть текст"
+              ></textarea>
+            </p>
+            <p class="form-field">
+              <label class="checkbox-form">
+                <input class="checkbox" type="checkbox" name="policy" />
+                <span class="checkbox-icon">
+                  <svg>
+                    <use href="./img/check-modal.svg"></use>
+                  </svg>
+                </span>
+                Погоджуюся з розсилкою та приймаю
+                <span class="form-link">Умови договору</span>
+              </label>
+            </p>
+            <button class="button primary forma" type="submit">
+              Відправити
+            </button>
           </form>
-          
 
           <button class="button-modal" data-modal-close>&#10006;</button>
         </div>
@@ -478,6 +487,24 @@
             </li>
           </ul>
         </div>
+        <div class="invitation">
+          <p class="invitation-name">Підпишіться на розсилку</p>
+          <p class="invitation-form">
+            <label for="email"></label>
+            <input class="email" type="email" name="email" id="email" placeholder="E-mail">
+            <button type="submit" 
+            class="button primary">Підписатися
+            <span>
+              <svg class="icon-send">
+                <use href="./img/sprite1.svg#icon-send-form"></use>
+              </svg>
+            </span>
+          </button>
+              
+          </p>
+          
+        </div>
+
       </div>
     </footer>
     <script src="./js/modal.js"></script>
