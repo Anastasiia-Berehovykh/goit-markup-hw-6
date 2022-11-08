@@ -231,32 +231,49 @@ button {
   top: 50%;
   left: 50%;
 
-  width: 600px;
-
-  padding: 15px;
+  width: 528px;
+height: 581px;
+  padding: 40px;
   background-color: #ffffff;
 
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: 250ms var(--timing-function);
 }
-.form {
-  width: 500px;
+/* .modal-close{
+  
+  display: inline-block;
+  
+  margin-top: 8px;
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  
+  border-radius: 50%;
+  fill: orange;
+  
+  background: #904040;
+border: 1px solid rgba(0, 0, 0, 0.1); 
+}
 
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px;
+.modal-close:focus{
+  fill: orange;
+  }  */
+  
+.form {
+  
+  
 }
 .form-field {
   position: relative;
 
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-.form-field:focus-within .icon-form {
+ /* .form-field:focus-within .icon-form {
   fill: var(--accent);
-}
+}  */
 
 .form-name {
   margin-bottom: 12px;
@@ -272,13 +289,30 @@ button {
 
 .form-field label {
   margin-bottom: 4px;
+  
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.01em;
+
+color: var(--primary-text-color);
+
 }
 .form-field input {
   margin: 0;
   padding: 11px 12px;
-  padding-left: 50px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2); 
   border-radius: 4px;
+  outline: transparent;
+}
+
+.form-input:focus +.icon-form{
+  
+  fill: var(--accent);
+}
+.form-label:focus + .form-input{
+  border-color: var(--accent);
 }
 
 .form-field input::placeholder {
@@ -286,14 +320,15 @@ button {
 }
 .icon-form {
   position: absolute;
-  top: 50%;
-  left: 30px;
   display: inline-block;
+  top: 50%;
+  left: 20px;
+ 
   width: 18px;
   height: 18px;
 
   transform: translateX(-50%);
-  transition: 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 .checkbox {
   position: absolute;
@@ -345,20 +380,27 @@ button {
 
 .button-modal {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   padding: 6px;
-  margin-top: 8px;
-  margin-right: 8px;
-  background-image: url(../img/close.svg);
+  
+
+   
 }
-.modal-icon {
+.modal-close{
+  position: absolute;
+  display: inline-block;
+  top: 8px;
+  right: 8px;
+  background-color: #2196f3;
   width: 30px;
   height: 30px;
+  border-radius: 50%;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
