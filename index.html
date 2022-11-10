@@ -64,33 +64,29 @@
               <label for="name" class="form-label">Ім'я</label>
 
               <input class="form-input" type="text" name="name" id="name" />
-              
-                <svg class="icon-form">
-                  <use href="./img/sprite1.svg#icon-person-modal"></use>
-                </svg>
-              
+
+              <svg class="icon-form">
+                <use href="./img/sprite1.svg#icon-person-modal"></use>
+              </svg>
             </div>
             <div class="form-field">
-              <label for="tel">Телефон</label>
+              <label for="tel" class="form-label">Телефон</label>
               <input class="form-input" type="tel" name="tel" id="tel" />
 
-              
-                <svg class="icon-form">
-                  <use href="./img/sprite1.svg#icon-phone-modal"></use>
-                </svg>
-              
+              <svg class="icon-form">
+                <use href="./img/sprite1.svg#icon-phone-modal"></use>
+              </svg>
             </div>
             <div class="form-field">
-              <label for="email">Пошта</label>
+              <label for="email" class="form-label">Пошта</label>
               <input class="form-input" type="email" name="email" id="email" />
-              
-                <svg class="icon-form">
-                  <use href="./img/sprite1.svg#icon-email-modal"></use>
-                </svg>
-              
+
+              <svg class="icon-form">
+                <use href="./img/sprite1.svg#icon-email-modal"></use>
+              </svg>
             </div>
             <div class="form-field">
-              <label for="comment">Коментар</label>
+              <label for="comment" class="form-label">Коментар</label>
               <textarea
                 class="comment"
                 name="comment"
@@ -103,39 +99,25 @@
             <div class="form-field">
               <label class="checkbox-form">
                 <input class="checkbox" type="checkbox" name="policy" />
-                <span class="checkbox-icon">
-                  <svg>
-                    <use href="./img/check-modal.svg"></use>
-                  </svg>
-                </span>
-                Погоджуюся з розсилкою та приймаю
-                <span class="form-link">Умови договору</span>
+
+                <svg class="checkbox-icon">
+                  <use href="./img/check-modal.svg"></use>
+                </svg>
+                <p class="checkbox-policy">Погоджуюся з розсилкою та приймаю</p>
+
+                <a href="" class="form-link">Умови договору</a>
               </label>
             </div>
             <button class="button primary forma" type="submit">
               Відправити
             </button>
           </form>
-          
-           
-            <button class="button-modal" data-modal-close>
-              <span class="modal-close">
-                <svg>
-                  <use href="./img/close-black.svg"></use>
-                </svg>
-              </span>
-            </button>
-              
-             
-            
-           
-          
-            
-          
-          
-            
-         
-          
+
+          <button class="button-modal" data-modal-close>
+            <svg class="modal-close">
+              <use href="./img/close-black.svg"></use>
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -509,20 +491,23 @@
           <p class="invitation-name">Підпишіться на розсилку</p>
           <p class="invitation-form">
             <label for="email"></label>
-            <input class="email" type="email" name="email" id="email" placeholder="E-mail">
-            <button type="submit" 
-            class="button primary">Підписатися
-            <span>
-              <svg class="icon-send">
-                <use href="./img/sprite1.svg#icon-send-form"></use>
-              </svg>
-            </span>
-          </button>
-              
+            <input
+              class="email"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="button primary">
+              Підписатися
+              <span>
+                <svg class="icon-send">
+                  <use href="./img/sprite1.svg#icon-send-form"></use>
+                </svg>
+              </span>
+            </button>
           </p>
-          
         </div>
-
       </div>
     </footer>
     <script src="./js/modal.js"></script>
