@@ -234,37 +234,13 @@ button {
   width: 528px;
 height: 581px;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: var(--white);
 
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: 250ms var(--timing-function);
 }
 
-/* .modal-close{
-  
-  display: inline-block;
-  
-  margin-top: 8px;
-  margin-right: 8px;
-  width: 30px;
-  height: 30px;
-  
-  border-radius: 50%;
-  fill: orange;
-  
-  background: #904040;
-border: 1px solid rgba(0, 0, 0, 0.1); 
-}
-
-.modal-close:focus{
-  fill: orange;
-  }  */
-  
-.form {
-  
-  
-}
 .form-field {
   position: relative;
 
@@ -284,7 +260,6 @@ border: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: var(--title-text-color);
 }
 
@@ -306,22 +281,31 @@ color: var(--primary-text-color);
   border: 1px solid rgba(33, 33, 33, 0.2); 
   border-radius: 4px;
   outline: transparent;
-}
 
+  transition: border-color 250ms var(--timing-function);
+}
+.form-field.textarea{
+  margin-bottom: 20px;
+}
+.form-field.check-box{
+  margin-bottom: 30px;
+}
 .form-input:focus +.icon-form{
   fill: var(--accent);
 }
 .form-input:focus{
   border-color: var(--accent);
 }
-
+.form-input:focus-visible{
+  outline: none;
+}
 
 .form-field input::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 .icon-form {
   position: absolute;
-  display: inline-block;
+  
   top: 50%;
   left: 20px;
  
@@ -347,6 +331,8 @@ color: var(--primary-text-color);
 .checkbox-form {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 .checkbox-icon {
   display: inline-block;
@@ -357,7 +343,7 @@ color: var(--primary-text-color);
   border-radius: 2px;
   margin-right: 7px;
 
-  transition: 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 .checkbox:checked + .checkbox-icon {
   background-color: var(--accent);
@@ -387,19 +373,34 @@ letter-spacing: 0.03em;
 }
 .comment {
   padding: 12px 16px;
-  margin-bottom: 20px;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
 }
 
-.button-modal {
+ .button-modal {
   position: absolute;
   top: 8px;
   right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 30px;
   height: 30px;
-  padding: 6px;  
-}
+  padding: 0; 
+  background-color: transparent; 
+  cursor: pointer;
 
+  transition: fill 250ms var(--timing-function);
+} 
+.button-modal:hover,
+.button-modal:focus{
+  fill: var(--accent);
+}
 
 .visually-hidden {
   position: absolute;
@@ -469,8 +470,7 @@ letter-spacing: 0.03em;
   padding: 6px;
   margin-top: 8px;
   margin-right: 8px;
-  background-image: url(../img/close.svg);
-}
+  }
 .modal-icon {
   width: 30px;
   height: 30px;
@@ -492,7 +492,23 @@ letter-spacing: 0.03em;
   letter-spacing: 0.06em;
   cursor: pointer;
 }
+.button.primary.forma{
+  display: block;
+  margin: 0 auto;
+}
+.button.primary.invit{
+  width: 200px;
+  margin-left: 12px;
+  font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: var(--white);
 
+}
 .button.secondary {
   padding: 6px 22px;
   background-color: var(--secondary-bgr);
@@ -943,26 +959,24 @@ footer .logo-studio {
 }
 .invitation-name {
   margin-bottom: 20px;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  color: #ffffff;
+  color: var(--white);
 }
 .invitation-form {
   position: relative;
   display: flex;
 }
+
 .email {
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   width: 358px;
+  padding: 15px 16px;
 }
 .icon-send {
   position: absolute;
