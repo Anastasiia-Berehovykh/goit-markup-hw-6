@@ -497,6 +497,7 @@ border-radius: 4px;
   margin: 0 auto;
 }
 .button.primary.invit{
+  position: relative;
   width: 200px;
   margin-left: 12px;
   font-weight: 700;
@@ -954,8 +955,7 @@ footer .logo-studio {
   align-items: baseline;
 }
 .invitation {
-  margin-left: 93px;
-  width: 570px;
+  margin-left: auto;
 }
 .invitation-name {
   margin-bottom: 20px;
@@ -977,14 +977,15 @@ footer .logo-studio {
   border-radius: 4px;
   width: 358px;
   padding: 15px 16px;
+  background-color: transparent;
+  color: var(--icon-color);
 }
 .icon-send {
   position: absolute;
-  top: 13px;
-  right: 18px;
-  display: inline-block;
+  top: 50%;
+  right: 32px;
   width: 24px;
   height: 24px;
   fill: var(--white);
-  margin-left: 10px;
+  transform: translateY(-50%);
 }
